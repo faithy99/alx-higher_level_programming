@@ -1,1 +1,1 @@
-This is a repo for the Hello World project
+This is a repo for the first python project
