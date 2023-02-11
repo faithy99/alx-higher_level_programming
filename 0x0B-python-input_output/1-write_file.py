@@ -1,22 +1,14 @@
 #!/usr/bin/python3
-"""Module 1-number_of_lines.
-Counts number of lines in a file.
-"""
+"""Defines a file-writing function."""
 
 
-def number_of_lines(filename=""):
-    """Counts lines in filename.
+def write_file(filename="", text=""):
+    """Write a string to a UTF8 text file.
     Args:
-        - filename: name of the file
+        filename (str): The name of the file to write.
+        text (str): The text to write to the file.
     Returns:
-        - number of lines
+        The number of characters written.
     """
-
-    count = 0
-
-    with open(filename) as f:
-        text = f.readlines()
-        for line in text:
-            count += 1
-
-    return count
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
